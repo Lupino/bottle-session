@@ -8,17 +8,12 @@ from bottle import request
 
 
 class SessionPlugin(object):
-    '''
-    '''
     name = 'session'
 
     def __init__(self):
         self.app = None
 
     def setup(self, app):
-        '''
-        Make sure that other installed plugins don't affect the same keyword argument.
-        '''
         self.app = app
         self.app.hooks.add('before_request', self.load_session)
         self.app.hooks.add('after_request', self.set_session)

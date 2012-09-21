@@ -22,21 +22,3 @@ A bottle plugin session
             'session.auto': True
         }
         app = SessionMiddleware(app, session_opts)
-
-Platform: any
-
-Classifier: Environment :: Web Environment
-
-Classifier: Intended Audience :: Developers
-
-Classifier: License :: OSI Approved :: MIT License
-
-Classifier: Operating System :: OS Independent
-
-Classifier: Programming Language :: Python
-
-Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
-
-Classifier: Topic :: Software Development :: Libraries :: Python Modules
-
-Requires: bottle (>=0.9) beaker

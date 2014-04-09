@@ -15,8 +15,8 @@ class SessionPlugin(object):
 
     def setup(self, app):
         self.app = app
-        self.app.hooks.add('before_request', self.load_session)
-        self.app.hooks.add('after_request', self.set_session)
+        self.app.add_hook('before_request', self.load_session)
+        self.app.add_hook('after_request', self.set_session)
         
     def load_session(self):
         self.app.session = request.environ.get('beaker.session', {})
